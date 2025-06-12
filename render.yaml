@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    repo: https://github.com/yesicamilagros/n8n-prueba
+    branch: main
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: false
+      - key: N8N_USER_MANAGEMENT_DISABLED
+        value: false
+      - key: N8N_USER_MANAGEMENT_ALLOW_SIGN_UP
+        value: true
+      - key: N8N_HOST
+        value: 0.0.0.0
